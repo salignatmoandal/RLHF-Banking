@@ -2,26 +2,29 @@ import sqlite3
 import pandas as pd
 import os
 
-# Chemin vers la base de données
-db_path = os.path.join('data', 'banking_data.db')
+"""
+Script to view the content of the clients database.
+"""
+# Relative path from src/database to data/banking_data.db
+db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'banking_data.db')
 
 try:
-    # Établir la connexion à la base de données
+    # Establish the connection to the database
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-    # Récupérer les données client
+    # Retrieve the customer data
     query = "SELECT * FROM customers"
     df = pd.read_sql_query(query, conn)
 
-    # Afficher les données
+    # Display the data
     print(df)
 
 except sqlite3.Error as e:
-    print(f"Erreur lors de la connexion à la base de données : {e}")
+    print(f"Error when connecting to the database: {e}")
 except Exception as e:
-    print(f"Une erreur s'est produite : {e}")
+    print(f"An error occurred: {e}")
 finally:
-    # Fermer la connexion
+    # Close the connection
     if 'conn' in locals():
         conn.close() 
