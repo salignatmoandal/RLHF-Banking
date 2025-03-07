@@ -12,5 +12,14 @@ Customer Data Retrieval – Uses an SQLite database to store and fetch structure
 - Unit & Integration Testing – Ensures reliability and correctness.
 - Dockerized Deployment – Supports containerized execution for portability.
 
+# Setup & Installation
+```
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+
+
 
 
