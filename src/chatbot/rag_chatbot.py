@@ -6,10 +6,14 @@ from langchain_core.prompts import ChatPromptTemplate
 import os
 from dotenv import load_dotenv
 
+"""
+Script to generate a response to a question based on the policies and the client profile.
+"""
+
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# Initialisation du modèle
+# Initialization of the model
 llm = ChatOpenAI(model="gpt-4", temperature=0)
 
 # Initialisation du vectorstore avec k=2
@@ -26,10 +30,10 @@ def get_customer_data(customer_id):
     return result
 
 def generate_response(customer_id, query):
-    # Récupérer les informations du client
+    # Retrieve the customer information
     customer = get_customer_data(customer_id)
     if not customer:
-        return "Client non trouvé."
+        return "Client not found."
     
     nom, prenom, credit_score, revenu_annuel = customer
     
@@ -37,11 +41,11 @@ def generate_response(customer_id, query):
     docs = retriever.invoke(query)
     policies = "\n".join([doc.page_content for doc in docs])
     
-    # Créer le prompt avec le contexte complet
+    # Create the prompt with the complete context
     prompt = ChatPromptTemplate.from_messages([
-        ("system", """Vous êtes un assistant bancaire. Analysez l'éligibilité du client en fonction des politiques et de son profil.
+        ("system", """You are a banking assistant. Analyze the eligibility of the client based on the policies and their profile.
 
-Politiques de prêt :
+Loan policies :
 {policies}
 
 Profil du client :
@@ -49,7 +53,7 @@ Profil du client :
 - Score de crédit : {credit_score}
 - Revenu annuel : {revenu_annuel}€
 
-Répondez à la question en tenant compte des politiques et du profil du client."""),
+Respond to the question taking into account the policies and the client profile."""),
         ("human", "{question}")
     ])
     

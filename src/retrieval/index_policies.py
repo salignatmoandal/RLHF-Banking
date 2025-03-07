@@ -6,19 +6,19 @@ def read_policy_file(file_path):
     with open(file_path, 'r') as file:
         return file.read()
 
-# Chemin vers le répertoire des politiques
+# Path to the policy directory
 policy_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'policy_docs')
 
-# Lire les fichiers de politique
+# Read the policy files
 policy_files = [
     os.path.join(policy_dir, 'loan_policy_1.txt'),
     os.path.join(policy_dir, 'loan_policy_2.txt')
 ]
 
-# Charger le contenu des politiques
+# Load the policy content
 loan_policies = [read_policy_file(file) for file in policy_files]
 
-# Créer et persister le vectorstore
+# Create and persist the vectorstore
 embeddings = OpenAIEmbeddings()
 vectorstore = Chroma.from_texts(loan_policies, embeddings, persist_directory="data/policy_docs")
 vectorstore.persist()
