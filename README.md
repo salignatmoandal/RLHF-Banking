@@ -11,6 +11,7 @@ Customer Data Retrieval – Uses an SQLite database to store and fetch structure
 - Scalable Architecture – Modular design for easy integration and expansion.
 - Unit & Integration Testing – Ensures reliability and correctness.
 - Dockerized Deployment – Supports containerized execution for portability.
+- Reinforcement Learning – Uses a feedback loop to improve the chatbot's performance.
 
 # Setup & Installation
 ```
