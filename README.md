@@ -24,6 +24,15 @@ pip install -r requirements.txt
 python src/database/setup_database.py
 ```
 
+#Index Loan Policies in ChromaDB
+```
+python src/retrieval/index_policies.py
+```
+
+# Run the Chatbot
+```
+python src/chatbot/rag_chatbot.py
+```
 
 
 
