@@ -1,8 +1,11 @@
 import sqlite3
 import os
 
+# Obtenir le chemin absolu de la base de données
+db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'banking_data.db')
+
 # Créer le répertoire data s'il n'existe pas
-db_path = os.path.join('data', 'banking_data.db')
+os.makedirs(os.path.dirname(db_path), exist_ok=True)
 
 # Créer la connexion à la base de données
 conn = sqlite3.connect(db_path)

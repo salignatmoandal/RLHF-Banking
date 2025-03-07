@@ -1,5 +1,10 @@
 openai
 langchain
+langchain-community
+langchain-openai
+langchain-chroma
+langchain-core
+tiktoken
 faiss-cpu
 chromadb
 pandas
