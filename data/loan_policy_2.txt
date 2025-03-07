@@ -1,0 +1,21 @@
+Loan Policy: Personal Loan Eligibility
+
+Eligibility Criteria:
+1. Customers must have a minimum credit score of 650 to qualify for a personal loan.
+2. A minimum monthly income of $3,500 is required for loan approval.
+3. Self-employed individuals must provide proof of income for the last 12 months.
+4. Customers with a history of missed payments in the past 6 months may face higher interest rates.
+5. The maximum loan amount is determined based on the customer's debt-to-income ratio.
+
+Terms and Conditions:
+- The loan approval process may take up to 7 business days.
+- Customers with an existing personal loan must wait 6 months before applying for a new one.
+- Interest rates range from 5% to 15%, depending on credit history.
+- Late payments may result in penalties and increased interest rates.
+- Loan prepayment is allowed with no additional fees.
+
+Additional Information:
+- Applicants can check their eligibility online before applying.
+- All loans are subject to final approval by the bank’s financial department.
+
+For further details, visit our branch or call our helpline.

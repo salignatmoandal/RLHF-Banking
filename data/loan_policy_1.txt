@@ -1,0 +1,15 @@
+Loan Policy: Low-Interest Loan Eligibility
+
+Eligibility Criteria:
+1. Customers with a credit score of 700 or above are eligible for low-interest loans.
+2. A minimum annual income of $50,000 is required to qualify for this loan.
+3. First-time applicants can receive a 5% discount on their loan processing fee.
+4. Customers with existing loans must have paid off at least 50% of their current loan before applying for a new one.
+
+Terms and Conditions:
+- The interest rate varies based on the applicant's credit score and loan amount.
+- Loans are subject to approval based on the latest financial assessment.
+- Loan repayment period ranges from 12 months to 60 months.
+- Customers may be required to provide additional financial documents for verification.
+
+For further details, please visit our official website or contact customer support.
