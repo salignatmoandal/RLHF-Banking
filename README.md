@@ -19,6 +19,12 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+# Initialize the Database
+```
+python src/database/setup_database.py
+```
+
+
 
 
 
