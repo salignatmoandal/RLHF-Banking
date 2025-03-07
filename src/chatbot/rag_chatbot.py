@@ -68,13 +68,13 @@ Answer the question considering both policies and client profile."""),
     })
     
     response_content = response.content
-    print("\nRéponse du chatbot :")
+    print("\nChatbot response:")
     print("-" * 50)
     print(response_content)
     print("-" * 50 + "\n")
     
     if collect_feedback:
-        rating = input("Veuillez noter la réponse (1-5) : ")
+        rating = input("Please rate the response (1-5): ")
         try:
             rating = int(rating)
             if 1 <= rating <= 5:
@@ -86,11 +86,11 @@ Answer the question considering both policies and client profile."""),
                     selected_policies=selected_policies
                 )
         except ValueError:
-            print("Note invalide fournie")
+            print("Invalid rating provided")
     
     return response_content
 
 if __name__ == "__main__":
-    customer_id = int(input("Entrez l'ID du client : "))
-    question = input("Posez votre question : ")
+    customer_id = int(input("Enter the customer ID: "))
+    question = input("Enter your question: ")
     generate_response(customer_id, question)
