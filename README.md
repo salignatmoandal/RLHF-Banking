@@ -34,7 +34,28 @@ python src/retrieval/index_policies.py
 python src/chatbot/rag_chatbot.py
 ```
 
+# How It Works
+1. User asks a financial question (e.g., "Am I eligible for a low-interest loan?")
+2. Chatbot retrieves customer financial data from the SQLite database.
+3. Relevant financial policies are fetched from ChromaDB.
+4. A Retrieval-Augmented Prompt is generated, combining retrieved information with the user query.
+5. LLM processes the prompt and generates a response.
+6. The chatbot returns a factual, personalized answer.
 
 
+# Technologies Used
+- Python (Primary programming language)
+- SQLite (Structured data storage)
+- ChromaDB (Vector database for unstructured data retrieval)
+- LangChain (LLM and retrieval integration)
+- OpenAI GPT API (Language model for response generation)
+- Docker (Containerization for deployment)
+- Logging & Testing Frameworks (Ensuring reliability and monitoring)
 
+
+#  Future Enhancements
+- Multi-turn conversation support
+- Enhanced fact-checking for more reliable responses
+- Real-time banking transaction analysis
+- Web-based chatbot interface (FastAPI/Flask integration)
 
